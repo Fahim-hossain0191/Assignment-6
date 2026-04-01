@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "Starter Resume Builder",
+    "description": "Create professional resumes with basic templates.",
+    "price": 0,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "info",
+    "features": ["10+ templates", "Basic customization", "Download PDF"],
+    "icon": "📄"
+  },
+  {
+    "id": 2,
+    "name": "Pro Resume Builder",
+    "description": "Advanced resume builder with ATS optimization.",
+    "price": 9,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "success",
+    "features": ["100+ templates", "ATS optimization", "Export to PDF", "Cover letter builder"],
+    "icon": "🚀"
+  },
+  {
+    "id": 3,
+    "name": "Portfolio Generator",
+    "description": "Build a stunning personal portfolio website.",
+    "price": 19,
+    "period": "one-time",
+    "tag": "best seller",
+    "tagType": "warning",
+    "features": ["Custom domains", "Responsive design", "SEO optimization"],
+    "icon": "🌐"
+  },
+  {
+    "id": 4,
+    "name": "AI Cover Letter Writer",
+    "description": "Generate personalized cover letters using AI.",
+    "price": 5,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "info",
+    "features": ["AI suggestions", "Multiple formats", "Easy editing"],
+    "icon": "✍️"
+  },
+  {
+    "id": 5,
+    "name": "Interview Prep Toolkit",
+    "description": "Practice interviews with real-world questions.",
+    "price": 12,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "success",
+    "features": ["Mock interviews", "Feedback system", "Common Q&A"],
+    "icon": "🎤"
+  },
+  {
+    "id": 6,
+    "name": "Job Tracker",
+    "description": "Track your job applications and progress.",
+    "price": 7,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "warning",
+    "features": ["Application tracking", "Status updates", "Reminder alerts"],
+    "icon": "📊"
+  },
+  {
+    "id": 7,
+    "name": "LinkedIn Optimizer",
+    "description": "Improve your LinkedIn profile visibility.",
+    "price": 15,
+    "period": "one-time",
+    "tag": "popular",
+    "tagType": "success",
+    "features": ["Profile analysis", "Keyword optimization", "Headline suggestions"],
+    "icon": "💼"
+  },
+  {
+    "id": 8,
+    "name": "AI Skill Analyzer",
+    "description": "Analyze and recommend skills for your career.",
+    "price": 10,
+    "period": "yearly",
+    "tag": "new",
+    "tagType": "info",
+    "features": ["Skill gap analysis", "Learning roadmap", "Industry insights"],
+    "icon": "🤖"
+  }
+]
