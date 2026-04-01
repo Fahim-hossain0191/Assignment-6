@@ -1,20 +1,21 @@
-import React from 'react';
-import Data from 'data.json'
-// {
-//     "id": 1,
-//     "name": "Starter Resume Builder",
-//     "description": "Create professional resumes with basic templates.",
-//     "price": 0,
-//     "period": "one-time",
-//     "tag": "new",
-//     "tagType": "info",
-//     "features": ["10+ templates", "Basic customization", "Download PDF"],
-//     "icon": "📄"
-//   },
-const CardContainer = () => {
+import React, { use } from 'react';
+import SingleCard from '../SingleCard/SingleCard';
+
+
+const CardContainer = ({promise}) => {
+    const data=use(promise);
+    console.log(data);
+   
+    
     return (
         <>
-        <div>
+        
+        <div className='grid grid-cols-3 w-10/12 mx-auto  mt-10 gap-10  place-items-center items-stretch'>
+            {
+                    data.map((user,index)=>
+                        <SingleCard key={index} user={user}></SingleCard>
+                    )
+            }
             
         </div>
         </>
