@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Cart from '../../Cart/Cart';
+import CardContainer from '../Cards/CardContainer/CardContainer';
+import FetchCard from '../FetchCard/FetchCard';
 
-const Container = () => {
+
+const Container = ({count,setCount}) => {
+ 
+const [cart, setCart] = useState(false);
+
     return (
         <>
            <div className='w-10/12 mx-auto pt-20'>
@@ -8,11 +15,15 @@ const Container = () => {
             <p className='text-sm font-light flex justify-center'>Choose from our curated collection of premium digital products designed  to boost your productivity and creativity.</p>
         </div>
 <div className=' flex justify-center mt-5'>
-       <div className='border rounded-full inline-flex gap-2'>
-          <button className='bg-linear-to-r from-[#4F39F6] to-[#9514FA]  p-3 rounded-full text-white'>Products</button>
-          <button className='bg-linear-to-r from-[#4F39F6] to-[#9514FA]  p-3 rounded-full text-white'>Cart (2)</button>
+       <div className='shadow-lg rounded-full inline-flex gap-2 px-3 py-2'>
+          <button onClick={()=>setCart(false)}  className={`px-3 py-2 ${cart===false?"bg-linear-to-r from-[#4F39F6] to-[#9514FA]  p-3 rounded-full text-white cursor-pointer":"bg-transparent"}`}>Products</button>
+        <button onClick={()=>setCart(true)} className={`px-3 py-2 ${cart===true?"bg-linear-to-r from-[#4F39F6] to-[#9514FA]  p-3 rounded-full text-white cursor-pointer":"bg-transparent"}`}>Cart ({count.length})</button>
         </div>
+  
 </div>
+       {
+        cart===true?<Cart count={count} setCount={setCount}></Cart>:<FetchCard count={count} setCount={setCount}></FetchCard>
+       }
        
         </>
       

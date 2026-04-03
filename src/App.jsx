@@ -1,4 +1,4 @@
-import { Suspense } from 'react'
+
 import './App.css'
 
 import Container from './Components/Card/Container/Container'
@@ -9,26 +9,22 @@ import GetStarted from './Components/GetStarted/GetStarted'
 import Pricing from './Components/Pricing/Pricing'
 import Bottom from './Components/Bottom/Bottom'
 import Footer from './Components/Footer/Footer'
+import { useState } from 'react'
 
 
-const fetchPlayer=async()=>{
-  const res=await fetch("/data.json");
-  return res.json();
-}
+
 
 function App() {
- 
-const promise=fetchPlayer();
+
+const [count,setCount]=useState([]);
   return (
-    <>
-      <Navbar></Navbar>
-      <Main></Main>
-      <Container></Container>
-      <Suspense fallback={<span className="loading loading-spinner loading-lg"></span>}>
-        <CardContainer promise={promise}></CardContainer>
-      </Suspense> 
-      <GetStarted></GetStarted>
     
+    <>
+      <Navbar count={count} setCount={setCount}></Navbar>
+      <Main></Main>
+      <Container count={count} setCount={setCount}></Container>
+      <GetStarted></GetStarted>
+      
      <Pricing></Pricing>
      <Bottom></Bottom>
      <Footer></Footer>

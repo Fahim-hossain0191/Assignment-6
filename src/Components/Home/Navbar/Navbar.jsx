@@ -1,9 +1,9 @@
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
-const Navbar = () => {
+const Navbar = ({count,setCount}) => {
   return (
     
-   <div className="navbar bg-base-100 shadow-sm h-auto w-10/12 mx-auto">
+   <div className="navbar bg-base-100 shadow-sm h-auto w-full mx-auto fixed top-0 left-0 right-0 z-50 px-40">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -15,10 +15,6 @@ const Navbar = () => {
         <li><a>Item 1</a></li>
         <li>
           <a>Parent</a>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
         </li>
         <li><a>Item 3</a></li>
       </ul>
@@ -28,9 +24,9 @@ const Navbar = () => {
 </h1>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
-      <li>
+    <ul className="menu menu-horizontal px-1 font-medium text-xl">
+      <li><a>Products</a></li>
+      {/* <li>
         <details>
           <summary>Parent</summary>
           <ul className="p-2 bg-base-100 w-40 z-1">
@@ -38,15 +34,25 @@ const Navbar = () => {
             <li><a>Submenu 2</a></li>
           </ul>
         </details>
-      </li>
-      <li><a>Item 3</a></li>
+      </li> */}
+      <li><a>Features</a></li>
+      <li><a>Pricing</a></li>
+      <li><a>Testimonials</a></li>
+      <li><a>FAQ</a></li>
     </ul>
   </div>
   <div className="navbar-end space-x-2">
-    <FaShoppingCart />
+   <div className="relative">
+  <FaShoppingCart className="text-2xl" />
+
+  <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-[2px] rounded-full">
+    {count.length}
+  </span>
+</div>
+   
     
-    <a>Login</a>
-    <button className="btn text-white bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full">Get Started</button>
+    <a className="font-medium text-xl">Login</a>
+    <button className="btn text-white bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full font-medium text-xl">Get Started</button>
   </div>
 </div>
   );
