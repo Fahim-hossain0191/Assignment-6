@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Cart from '../../../Cart/Cart';
 import { IoCheckmark } from "react-icons/io5";
+import { toast } from 'react-toastify';
+
 // {
 //     "id": 1,
 //     "name": "Starter Resume Builder",
@@ -24,6 +26,7 @@ const SingleCard = ({user,count,setCount}) => {
   }
 
   setCount([...count, user]);
+  toast.success("Cart is added!");
 };
    const isAdded = count.some(item => item.id === user.id); 
     const feature=user.features;
@@ -39,7 +42,13 @@ const SingleCard = ({user,count,setCount}) => {
        </div>
       <h2 className="text-3xl font-bold">{user.name}</h2>
       <p>{user.description}</p>
-      <span className='text-2xl'>{`$${user.price}/${user.period}`}</span>
+      <span className='text-3xl font-bold flex items-center'>${user.price}
+        <p className='font-light text-2xl'>
+                     /${user.period}
+        </p>
+        
+
+      </span>
     <ul className="mt-6 flex flex-col gap-2 text-xs">
          {
           feature.map((item,index)=><li key={index} className='text-xl'>
@@ -53,7 +62,8 @@ const SingleCard = ({user,count,setCount}) => {
     </ul>
     <div className="mt-6 ">
 <button
-  onClick={handleCart}
+  onClick={()=>{
+    handleCart()}}
   disabled={isAdded}
   className={`btn text-white rounded-full w-full ${
     isAdded

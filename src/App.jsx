@@ -13,7 +13,6 @@ import { useState } from 'react'
 
 
 
-
 function App() {
 
 const [count,setCount]=useState([]);
@@ -28,6 +27,7 @@ const [count,setCount]=useState([]);
      <Pricing></Pricing>
      <Bottom></Bottom>
      <Footer></Footer>
+    
     </>
   )
 }

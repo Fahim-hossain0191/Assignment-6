@@ -3,14 +3,14 @@ import React from "react";
 const Pricing = () => {
   return (
     <>
-      <div className="w-10/12 mx-auto  ">
+      <div className="w-10/12 mx-auto ">
         <h1 className="text-4xl font-bold text-center">
           Simple, Transparent Pricing
         </h1>
         <p className="text-xl font-light text-center">
           Choose the plan that fits your needs. Upgrade or downgrade anytime.
         </p>
-        <div className="grid grid-cols-3 items-stretch mt-10 gap-10  place-items-center">
+        <div className="grid md:grid-cols-3 grid-cols-1 items-stretch mt-10 gap-10  place-items-center">
           <div className="card w-96 bg-base-100 shadow-lg">
             <div className="card-body">
               {/* <span className="badge badge-xs badge-warning">Most Popular</span> */}

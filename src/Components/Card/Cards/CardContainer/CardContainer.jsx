@@ -10,7 +10,7 @@ const CardContainer = ({promise,count,setCount}) => {
     return (
         <>
         
-        <div className='grid grid-cols-3 w-10/12 mx-auto  mt-10 gap-10  place-items-center items-stretch'>
+        <div className='grid md:grid-cols-3 grid-cols-1 w-10/12 mx-auto  mt-10 gap-10  place-items-center items-stretch'>
             {
                     data.map((user,index)=>
                         <SingleCard key={index} user={user} count={count} setCount={setCount}></SingleCard>

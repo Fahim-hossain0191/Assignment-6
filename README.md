@@ -1,16 +1,7 @@
-# React + Vite
+1.Ans: My project name is DigiTools
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2.Ans: The project is about adding product cart into cart section , In this project there premium digital tools card , I have to add , remove card.
 
-Currently, two official plugins are available:
+3.Ans: I have used --> reactjs, tailwindcss, daisyui, react toastify,react icons
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+4.Ans: 3 features of my project--> 1. Toggling between product and cart button 2. Adding item to cart section 3. Delete cart from cart section
